@@ -1,0 +1,12 @@
+1. 
+    SELECT COUNT(DISTINCT Order_id) AS total_orders
+    FROM SALES
+    WHERE Date = '2023-03-18';
+
+2. 
+    SELECT COUNT(DISTINCT S.Order_id) AS total_orders
+FROM SALES S
+JOIN CUSTOMERS C ON S.Customer_id = C.Customer_id
+WHERE S.Date = '2023-03-18' 
+  AND C.first_name = 'John' 
+  AND C.last_name = 'Doe';
